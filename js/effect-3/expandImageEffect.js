@@ -1,3 +1,5 @@
+import imagesLoaded from 'imagesloaded';
+
 export class ExpandImageEffect {
   constructor(el) {
     // Validates the input element to ensure it's an HTML element.

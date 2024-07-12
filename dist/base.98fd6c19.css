@@ -28,7 +28,7 @@ html.lenis, html.lenis body {
 
 @font-face {
   font-family: "Coconat";
-  src: url("../fonts/Coconat-Regular.woff2") format("woff2");
+  src: url("/Coconat-Regular.9d51b935.woff2") format("woff2");
 }
 
 :root {
@@ -86,7 +86,7 @@ body {
 	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: url(../img/noise.png), radial-gradient(circle, var(--white-smoke) 0%, var(--timberwolf) 100%);
+	background: url(/noise.4ceed601.png), radial-gradient(circle, var(--white-smoke) 0%, var(--timberwolf) 100%);
 	background-size: 150px, 100% 100vh;
 	background-attachment: fixed;
 }
@@ -772,3 +772,5 @@ rt {
 	font-size: 12px;
 	color: #616161;
 }
+
+/*# sourceMappingURL=/base.98fd6c19.css.map */

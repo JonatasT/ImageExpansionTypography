@@ -1,0 +1,16 @@
+<!--<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+          <defs>
+            <clipPath id="shape">
+              <path id="blob" d="M413,294.5Q388,339,365,395.5Q342,452,279,470.5Q216,489,163,450.5Q110,412,79.5,360.5Q49,309,45,249Q41,189,96,162.5Q151,136,185,84.5Q219,33,285,30.5Q351,28,405,72Q459,116,448.5,183Q438,250,413,294.5Z" fill="#d1d8e0"></path>
+            </clipPath>
+          </defs>
+          <image x="-3.5rem" y="-16rem" width="100%" clip-path="url(#shape)" xlink:href="./4.JPG" preserveAspectRatio="none"></image>
+        </svg>-->
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 124 124" fill="none">
+<rect width="124" height="124" rx="24" fill="#F97316"/>
+<path d="M19.375 36.7818V100.625C19.375 102.834 21.1659 104.625 23.375 104.625H87.2181C90.7818 104.625 92.5664 100.316 90.0466 97.7966L26.2034 33.9534C23.6836 31.4336 19.375 33.2182 19.375 36.7818Z" fill="white"/>
+<circle cx="63.2109" cy="37.5391" r="18.1641" fill="black"/>
+<rect opacity="0.4" x="81.1328" y="80.7198" width="17.5687" height="17.3876" rx="4" transform="rotate(-45 81.1328 80.7198)" fill="#FDBA74"/>
+</svg>

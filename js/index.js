@@ -1,5 +1,7 @@
 // Importing utility function for preloading images
 import { preloadImages } from './utils.js';
+import Cursor from './cursor';
+
 // Importing ExpandImageEffect classes from different effect files with renamed imports to avoid name conflicts
 import { ExpandImageEffect as ExpandImageEffect1 } from './effect-1/expandImageEffect.js';
 import { ExpandImageEffect as ExpandImageEffect2 } from './effect-2/expandImageEffect.js';
@@ -36,4 +38,22 @@ const init = () => {
 preloadImages('.type__expand-img-inner').then(() => {
   document.body.classList.remove('loading');
   init();
+});
+
+
+
+
+// Preload images and fonts
+Promise.all([preloadImages('.content--hero', '.content', '.content--left', 'content--right')]).then(() => {
+    // Remove loader (loading class)
+    document.body.classList.remove('loading');
+
+    // Initialize custom cursor
+    const cursor = new Cursor(document.querySelector('.cursor'));
+
+    // Mouse effects on all links and others
+    [...document.querySelectorAll('a, .column__item-img, .type__expand-img-inner, .timer, image')].forEach(link => {
+        link.addEventListener('mouseenter', () => cursor.enter());
+        link.addEventListener('mouseleave', () => cursor.leave());
+    });
 });
