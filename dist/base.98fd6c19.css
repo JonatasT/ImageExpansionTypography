@@ -786,6 +786,7 @@ rt {
 
 #scrollTopButton svg, path, polygon {
 	stroke: #fff;
+	transition: all 0.3s ease;
 }
 
 #scrollTopButton:hover {
