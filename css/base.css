@@ -772,3 +772,23 @@ rt {
 	font-size: 12px;
 	color: #616161;
 }
+
+#scrollTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+	scale: .6;
+	transition: all 0.3s ease;
+}
+
+#scrollTopButton svg, path, polygon {
+	stroke: #fff;
+}
+
+#scrollTopButton:hover {
+	scale: 0.8;
+	transition: all 0.3s ease;
+}
