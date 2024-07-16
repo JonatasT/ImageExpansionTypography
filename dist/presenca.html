@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Fullscreen Form Interface</title>
+		<meta name="description" content="Fullscreen Form Interface: A distraction-free form concept with fancy animations">
+    <link rel="stylesheet" type="text/css" href="/base.98fd6c19.css">
+		<link rel="stylesheet" type="text/css" href="/normalize.89f8e92e.css">
+		<link rel="stylesheet" type="text/css" href="/demo.90a71dd4.css">
+		<link rel="stylesheet" type="text/css" href="/component.67922cc8.css">
+		<link rel="stylesheet" type="text/css" href="/cs-select.a3f85590.css">
+		<link rel="stylesheet" type="text/css" href="/cs-skin-boxes.daaae07a.css">
+		<script src="/modernizr.custom.3002c351.js"></script>
+	<script src="/normalize.89f8e92e.js"></script><script src="/demo.90a71dd4.js"></script><script src="/component.67922cc8.js"></script><script src="/cs-select.a3f85590.js"></script><script src="/cs-skin-boxes.daaae07a.js"></script></head>
+	<body>
+		<div class="container">
+
+			<div class="fs-form-wrap" id="fs-form-wrap">
+				<div class="fs-title">
+					<h1>Confirmação de presença</h1>
+					<div class="codrops-top">
+						<a class="" href="/index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="100px" height="100px" viewBox="0 0 100 100" x="50px" y="50px" enable-background="new 0 0 100 100" xml:space="">
+        <polygon fill="none" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="  64.999,35 49.999,20 35.001,35 49.999,20 "></polygon>
+        <path fill="none" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="  M49.999,80V20V80z"></path>
+              </svg>
+              <span>Voltar</span>
+            </a>
+					</div>
+				</div>
+				<form id="myform" class="fs-form fs-form-full" autocomplete="off">
+					<ol class="fs-fields">
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q1">Qual é o seu nome?</label>
+							<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Digite o seu nome aqui" required="">
+						</li>
+						<li>
+							<label class="fs-field-label fs-anim-upper" for="q2" data-info="Nós não enviaremos spam para você, prometemos...">Qual é o seu email?</label>
+							<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="email@email.com" required="">
+						</li>
+						<li data-input-trigger="">
+							<label class="fs-field-label fs-anim-upper" for="q3" data-info="A sua presença é muito importante pra nós! Pense com carinho <3">Você irá ao casamento?</label>
+							<div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								<span><input id="q3b" name="q3" type="radio" value="conversion"><label for="q3b" class="radio-conversion">Estarei lá!</label></span>
+								<span><input id="q3c" name="q3" type="radio" value="social"><label for="q3c" class="radio-social">Não poderei ir</label></span>
+							</div>
+						</li>
+					</ol><!-- /fs-fields -->
+					<button class="fs-submit" type="submit">Enviar</button>
+				</form><!-- /fs-form -->
+			</div><!-- /fs-form-wrap -->
+
+			<!-- Related demos -->
+			<div class="related">
+				<p>If you enjoyed this demo you might also like:</p>
+				<a href="http://tympanus.net/Development/MinimalForm/">
+					<img src="">
+					<h3>Minimal Form Interface</h3>
+				</a>
+				<a href="http://tympanus.net/Development/ButtonComponentMorph/">
+					<img src="">
+					<h3>Morphing Buttons Concept</h3>
+				</a>
+			</div>
+
+		</div><!-- /container -->
+		<script src="/classie.6bc29fd8.js"></script>
+		<script src="/selectFx.c3ec3cdc.js"></script>
+		<script src="/fullscreenForm.dd490dde.js"></script>
+		<script>(function () {
+  var formWrap = document.getElementById('fs-form-wrap');
+  [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+    new SelectFx(el, {
+      stickyPlaceholder: false,
+      onChange: function onChange(val) {
+        document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+      }
+    });
+  });
+  new FForm(formWrap, {
+    onReview: function onReview() {
+      classie.add(document.body, 'overview'); // for demo purposes only
+    }
+  });
+})();</script>
+	</body>
+</html>

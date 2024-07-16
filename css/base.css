@@ -535,6 +535,11 @@ header div nav {
 	.column__item-img {
 		border-radius: 1rem	!important;
 	}
+
+	.modal-content {
+		width: 80% !important;
+		height: 80%;
+	}
 }
 
 @media screen and (min-width: 53em) {
@@ -793,3 +798,40 @@ rt {
 	scale: 0.8;
 	transition: all 0.3s ease;
 }
+
+
+/* style.css */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/noise.png), radial-gradient(circle, #33415c 0%, #001233 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background 2.5s ease; /* Transição suave para mudanças de cor de fundo */
+	z-index: 1001;
+}
+
+.modal-content {
+	padding: 20px;
+	width: 50%;
+	height: 50%;
+	overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura máxima */
+}
+
+.modal-header, .modal-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px; /* Espaçamento entre header, main e footer */
+}
+
+#close-btn {
+	cursor: pointer;
+}
+
+
+/* ------------ */
