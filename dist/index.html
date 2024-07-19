@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <script>document.documentElement.className = "js";
 var supportsCssVars = function supportsCssVars() {
   var e,
@@ -19,7 +20,7 @@ var supportsCssVars = function supportsCssVars() {
   return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
 };
 supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-<script src="/base.98fd6c19.js"></script></head>
+<script src="/presentes.js"></script></head>
   <body class="demo-1 loading">
 
     <main>
@@ -29,7 +30,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
           <nav>
             <a class="frame__back" href="#">Home</a>
             <a id="" class="frame__archive md-trigger" href="/presenca.html">Presença</a>
-            <a class="frame__github" href="#">Presentes</a>
+            <a class="frame__github" href="/presentes.html">Presentes</a>
           </nav>
         </div>  
       </header>
@@ -132,7 +133,26 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
         <p class="block">
           O local do nosso casamento é um sonho que se tornou realidade. O <a alt="Varandas Park" href="https://varandaspark.com.br/" target="_blank"><u>Varandas Park</u></a> é um espaço muito agradável para o momento mais feliz de nossas vidas. O local, em si, é uma bela combinação de charme rústico e elegância moderna.
           Além disso, possui salão de festas com varandas, recepção coberta e boate, em ambiente anexo ao salão principal, e possui também estacionamento interno para todos os convidados. A área de cerimônia ao ar livre oferece um cenário natural e romântico para trocarmos nossos votos.
+          <br>
+          <a data-modal="modal-one">Ver localização</a>
         </p>
+        
+        <div class="modal" id="modal-one">
+          <div class="modal-bg modal-exit"></div>
+          <div class="modal-container">
+            <h1 class="">Localização do Varandas Park</h1>
+            <p>SMPW Quadra 5 Conjunto 03 Casa 03, Park Way, <br> Brasília - DF, 71735-503</p>
+            <!--<h2>Pure Vanilla JavaScript</h2>-->
+            <div id="map"></div>
+            <!--<div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7676.5289906940425!2d-47.998836!3d-15.842689999999997!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a31fe52bf07d3%3A0x6d83963bf65ae561!2sVarandas%20Park!5e0!3m2!1spt-BR!2sus!4v1721338277763!5m2!1spt-BR!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>-->
+
+            <button class="modal-close modal-exit">
+              <svg width="1.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#000000"></path></svg>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="content content--left">
         <h3 class="meta">Comes & bebes</h3>
@@ -386,8 +406,9 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
     <script src="/countdown-timer.2e36ebb4.js"></script>
     <script src="/scrollProgressbar.7a9eee0f.js"></script>
     <script src="/scrollTop.515ae2fa.js"></script>
-    <script src="/modal.ac65a669.js"></script>
+    <script src="/modal-map.0498697c.js"></script>
     <script src="/classie.6bc29fd8.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!--<script src="js/buttons/demo.js"></script>
     <script src="js/buttons/buttonCtrl/index.js"></script>-->
 </body>

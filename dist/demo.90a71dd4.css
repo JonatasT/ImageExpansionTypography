@@ -140,4 +140,10 @@ a:hover, a:focus {
 	text-align: left;
 }
 
+.frame {
+	position: sticky;
+	top: 0;
+	margin-bottom: 0;
+}
+
 /*# sourceMappingURL=/demo.90a71dd4.css.map */

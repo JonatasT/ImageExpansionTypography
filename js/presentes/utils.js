@@ -76,3 +76,14 @@ export {
     wrapLines,
     adjustedBoundingRect
 };
+
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 0) {
+    headerNav.style.position = 'sticky';
+    headerNavContainer.classList.add('frame__nav--header--sticky');
+  } else {
+    headerNav.style.position = 'relative'; // or whatever the default position is
+    headerNavContainer.classList.remove('frame__nav--header--sticky');
+  }
+});

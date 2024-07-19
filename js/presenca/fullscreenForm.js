@@ -322,6 +322,7 @@
 				nextField.querySelector( '.fs-anim-upper' ).addEventListener( animEndEventName, onEndAnimationFn );
 			}
 		}
+		
 		else {
 			onEndAnimationFn();
 		}
@@ -451,10 +452,10 @@
 		var message = '';
 		switch( err ) {
 			case 'NOVAL' : 
-				message = 'Please fill the field before continuing';
+				message = 'Insira a informação antes de continuar';
 				break;
 			case 'INVALIDEMAIL' : 
-				message = 'Please fill a valid email address';
+				message = 'Por favor, insira um email válido';
 				break;
 			// ...
 		};

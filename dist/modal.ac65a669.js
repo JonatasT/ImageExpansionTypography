@@ -118,31 +118,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/modal/index.js":[function(require,module,exports) {
-// script.js
-document.addEventListener('DOMContentLoaded', function () {
-  var modal = document.getElementById('modal');
-  var opepBtn = document.getElementById('open-btn');
-  var closeBtn = document.getElementById('close-btn');
-
-  // Função para abrir o modal
-  function openModal() {
-    modal.style.display = 'flex';
-  }
-
-  // Função para fechar o modal
-  function closeModal() {
-    modal.style.display = 'none';
-  }
-
-  // Event listener para o botão de abrir
-  opepBtn.addEventListener('click', openModal);
-
-  // Event listener para o botão de fechar
-  closeBtn.addEventListener('click', closeModal);
-
-  // Exemplo de como abrir o modal após 3 segundos
-  //setTimeout(openModal, 3000);
+var modals = document.querySelectorAll("[data-modal]");
+modals.forEach(function (trigger) {
+  trigger.addEventListener("click", function (event) {
+    event.preventDefault();
+    var modal = document.getElementById(trigger.dataset.modal);
+    modal.classList.add("open");
+    var exits = modal.querySelectorAll(".modal-exit");
+    exits.forEach(function (exit) {
+      exit.addEventListener("click", function (event) {
+        event.preventDefault();
+        modal.classList.remove("open");
+      });
+    });
+  });
 });
+var map = L.map('map').setView([51.505, -0.09], 13);
 },{}],"../../../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -168,7 +159,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55045" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59400" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

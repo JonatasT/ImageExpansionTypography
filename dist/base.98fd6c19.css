@@ -536,9 +536,14 @@ header div nav {
 		border-radius: 1rem	!important;
 	}
 
-	.modal-content {
-		width: 80% !important;
-		height: 80%;
+	.modal-container {
+		width: 90svw;
+		height: 40svh;
+
+		& iframe {
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 
@@ -800,40 +805,83 @@ rt {
 }
 
 
-/* style.css */
-.modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url(/noise.4ceed601.png), radial-gradient(circle, #33415c 0%, #001233 100%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: background 2.5s ease; /* Transição suave para mudanças de cor de fundo */
-	z-index: 1001;
-}
-
-.modal-content {
-	padding: 20px;
-	width: 50%;
-	height: 50%;
-	overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura máxima */
-}
-
-.modal-header, .modal-footer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 20px; /* Espaçamento entre header, main e footer */
-}
-
 #close-btn {
 	cursor: pointer;
 }
 
 
 /* ------------ */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.modal {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal.open {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+}
+.modal-bg {
+	position: absolute;
+	background: black;
+	opacity: 0.3;
+	width: 100%;
+	height: 100%;
+}
+.modal-container {
+	border-radius: 10px;
+	background: #fff;
+	position: relative;
+	padding: 30px;
+	text-align: left;
+	color: var(--color-text);
+
+
+	& h1 {
+		font-size: 1.5rem;
+		font-weight: 400;
+		margin-bottom: 1rem;
+	}
+
+	& p {
+		margin-bottom: 2rem;
+	}
+}
+
+.modal-close {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	outline: none;
+	appearance: none;
+	color: var(--color-text);
+	background: none;
+	border: 0px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#map { height: 50svh; width: 50svw; }
 
 /*# sourceMappingURL=/base.98fd6c19.css.map */

@@ -51,16 +51,36 @@
 	padding: 2.5em 30% 6em;
 	width: 100%;
 	height: 100%;
-	background: #fffed8;
-	color: #3b3f45;
-	font-size: 1.2em;
+	--color-text: #767676;
+	--color-text-heading: #fff;
+	--color-bg: #d6ccc1;
+	--color-link: #000;
+	--color-link-hover: #000;
+	--white-smoke: #F3F2F0ff;
+	--timberwolf: #D4CEC8ff;
+	--text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+	margin: 0;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: "Onest",-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: url(/noise.4ceed601.png), radial-gradient(circle, var(--white-smoke) 0%, var(--timberwolf) 100%);
+	background-size: 150px, 100% 100vh;
+	background-attachment: fixed;
+
+
+	font-size: 16px;
+	font-weight: 300;
 }
 
 .fs-form-overview .fs-fields::before {
 	display: block;
 	margin-bottom: 2.5em;
 	color: #3b3f45;
-	content: 'Review & Submit';
+	content: 'Confirmar dados & enviar';
 	font-weight: 700;
 	font-size: 1.85em;
 }
@@ -143,9 +163,9 @@ button.fs-continue,
 	list-style: none;
 }
 
-.fs-form-overview ol {
+/*.fs-form-overview ol {
 	max-width: ;
-}
+}*/
 
 .fs-fields > li {
 	position: relative;
@@ -244,7 +264,7 @@ button.fs-continue,
 	border: none;
 	border-bottom: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
-	color: #fffed8;
+	color: #3f2700;
 	text-overflow: ellipsis;
 	font-weight: bold;
 	font-size: 1.5em;
@@ -268,11 +288,11 @@ button.fs-continue,
 }
 
 .fs-fields input:focus {
-	background-color: #3b3f45; /* Fixes chrome bug with placeholder */
+	background-color: #3b3f451e; /* Fixes chrome bug with placeholder */
 }
 
 .fs-form-overview .fs-fields input:focus {
-	background-color: #fffed8; /* Fixes chrome bug with placeholder */
+	background-color: transparent; /* Fixes chrome bug with placeholder */;
 }
 
 .fs-form-overview .fs-fields input {
@@ -335,7 +355,7 @@ button.fs-continue,
 	background-size: 85%;
 	background-repeat: no-repeat;
 	content: '';
-	opacity: 0.5;
+	opacity: 0.1;
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 	-webkit-transform: translate(-50%,-50%);
@@ -343,15 +363,15 @@ button.fs-continue,
 }
 
 .fs-fields .fs-radio-custom label.radio-mobile::after {
-	/*background-image: url(../img/mobile.svg);*/
+	/*background-image: url(../../img/check-circle.svg);*/
 }
 
 .fs-fields .fs-radio-custom label.radio-social::after {
-	/*background-image: url(../img/social.svg);*/
+	background-image: url(/close-circle.f52981a4.svg);
 }
 
 .fs-fields .fs-radio-custom label.radio-conversion::after {
-	/*background-image: url(../img/conversion.svg);*/
+	background-image: url(/check-circle.c22586ea.svg);
 }
 
 .fs-fields .fs-radio-custom label:hover::after,
@@ -361,7 +381,7 @@ button.fs-continue,
 }
 
 .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
-	color: #fffed8;
+	color: #fff;
 }
 
 .fs-form-overview .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
@@ -374,7 +394,7 @@ button.fs-continue,
 	height: 200px;
 	border: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
-	color: #fffed8;
+	color: #fff;
 	font-weight: 700;
 	font-size: 0.85em;
 	resize: none;
@@ -395,7 +415,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields textarea:focus {
-	background: #fffed8;
+	background: #fff;
 }
 
 .fs-form div.cs-select.cs-skin-boxes {
@@ -506,7 +526,7 @@ button.fs-continue,
 
 .fs-nav-dots button:hover::before,
 .fs-nav-dots button.fs-dot-current::before {
-	background: #fffed8;
+	background: #fff;
 }
 
 /* Progress bar */
@@ -514,8 +534,10 @@ button.fs-continue,
 	position: absolute;
 	top: 0;
 	width: 0%;
-	height: 0.5em;
-	background: #fffed8;
+	height: 0.2em;
+	background: #fff;
+
+
 	-webkit-transition: width 0.3s ease-in-out;
 	transition: width 0.3s ease-in-out;
 }
@@ -646,7 +668,7 @@ button.fs-continue {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	margin: 0 40px 60px 0;
+	margin: 0 40px 150px 0;
 	font-size: 1.25em;
 }
 
@@ -666,7 +688,7 @@ button.fs-continue:hover {
 	text-align: center;
 	background: transparent;
 	color: rgba(0,0,0,0.3);
-	content: 'or press ENTER';
+	content: 'ou pressione ENTER';
 	font-size: 0.65em;
 	pointer-events: none;
 }
